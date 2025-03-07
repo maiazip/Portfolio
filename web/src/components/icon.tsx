@@ -29,7 +29,7 @@ const Icon: React.FC<IconProps> = ({ icon }) => {
       >
         {cloneElement(icon, {
           className: `${
-            (icon.props as { className?: string }).className
+            icon.props && (icon.props as { className?: string }).className
               ? (icon.props as { className?: string }).className + " "
               : ""
           }${fixedClassName}`,
