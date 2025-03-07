@@ -1,6 +1,13 @@
 "use client";
 
-import React, { ReactNode, isValidElement, cloneElement, useRef } from "react";
+import React, {
+  ReactNode,
+  isValidElement,
+  cloneElement,
+  useRef,
+  ReactElement,
+  HTMLAttributes,
+} from "react";
 import { motion, useInView } from "framer-motion";
 
 interface IconProps {
@@ -8,7 +15,7 @@ interface IconProps {
 }
 
 const Icon: React.FC<IconProps> = ({ icon }) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
 
   const fixedClassName =
@@ -20,6 +27,8 @@ const Icon: React.FC<IconProps> = ({ icon }) => {
   };
 
   if (isValidElement(icon)) {
+    const element = icon as ReactElement<HTMLAttributes<HTMLElement>>;
+
     return (
       <motion.span
         ref={ref}
@@ -27,11 +36,9 @@ const Icon: React.FC<IconProps> = ({ icon }) => {
         animate={isInView ? "visible" : "hidden"}
         variants={variants}
       >
-        {cloneElement(icon, {
+        {cloneElement(element, {
           className: `${
-            icon.props && (icon.props as { className?: string }).className
-              ? (icon.props as { className?: string }).className + " "
-              : ""
+            element.props?.className ? element.props.className + " " : ""
           }${fixedClassName}`,
         })}
       </motion.span>
