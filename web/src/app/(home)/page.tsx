@@ -11,12 +11,12 @@ import Footer from "@/components/footer";
 import { useRef } from "react";
 
 export default function Home() {
-  const heroRef = useRef<HTMLElement | null>();
-  const introRef = useRef<HTMLElement | null>();
-  const aboutRef = useRef<HTMLElement | null>();
-  const workRef = useRef<HTMLElement | null>();
-  const projectsRef = useRef<HTMLElement | null>();
-  const certificatesRef = useRef<HTMLElement | null>();
+  const heroRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
+  const introRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
+  const aboutRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
+  const workRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
+  const projectsRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
+  const certificatesRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
 
   return (
     <main className="w-full max-w-screen h-fit min-h-dvh flex flex-col items-center justify-baseline scroll-smooth select-none">
