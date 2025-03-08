@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <motion.footer
       ref={footerRef}
-      className="z-50 w-full h-fit flex items-start justify-center font-heading font-medium leading-none"
+      className="z-50 w-11/12 h-fit flex items-start justify-center font-heading font-medium leading-none"
       initial={{ y: 100, opacity: 0 }}
       animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
       transition={{ duration: 0.5 }}
@@ -114,8 +114,8 @@ export default function Footer() {
             </a>
           </li>
         </ul>
-        <span className="w-full flex items-center justify-center">
-          © 2025 "Decode" All rights reserved.
+        <span className="w-full flex items-center justify-center text-center">
+          © 2025 "Matheus Maia Bastos" All rights reserved.
         </span>
       </nav>
     </motion.footer>
