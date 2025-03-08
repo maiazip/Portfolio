@@ -4,7 +4,7 @@
   --font-heading: var(--font-oxanium);
   --font-sans: var(--font-montserrat);
 }
-
+/* 
 ::-webkit-scrollbar {
   background: transparent;
   width: 0.5rem;
@@ -13,4 +13,4 @@
 ::-webkit-scrollbar-thumb {
   background: #fef08a;
   border-radius: 4rem;
-}
+} */
