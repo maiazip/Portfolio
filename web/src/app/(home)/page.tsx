@@ -33,9 +33,9 @@ export default function Home() {
       <Hero heroRef={heroRef} introRef={introRef} />
       <Intro ref={introRef} />
       <About ref={aboutRef} />
+      <Certificates ref={certificatesRef} />
       <Work ref={workRef} />
       <Projects ref={projectsRef} />
-      <Certificates ref={certificatesRef} />
       <Footer />
     </main>
   );

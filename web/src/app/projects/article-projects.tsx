@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ButtonShowMore } from "../../components/button-show-more";
 import Card from "./card";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projectsData = [
   {
@@ -120,16 +121,25 @@ export function ArticleProjects() {
   return (
     <article className="w-full h-full flex flex-col items-center justify-start gap-2">
       <ul className="w-full max-sm:max-w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-2">
-        {displayedProjects.map((project, index) => (
-          <Card
-            key={index}
-            src={project.src}
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-            link={project.link}
-          />
-        ))}
+        <AnimatePresence>
+          {displayedProjects.map((project, index) => (
+            <motion.li // Mantém motion.li aqui
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Card // Card agora é um div
+                src={project.src}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                link={project.link}
+              />
+            </motion.li>
+          ))}
+        </AnimatePresence>
       </ul>
       {ToShow < projectsData.length && (
         <ButtonShowMore

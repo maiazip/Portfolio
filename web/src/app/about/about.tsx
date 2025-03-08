@@ -72,19 +72,16 @@ const About = forwardRef<HTMLElement>((props, ref) => {
           >
             {`<`}ADS{`>`}
           </abbr>{" "}
-          na{" "}
-          <address className="not-italic">
-            Faculdade Das Américas{" "}
-            <abbr
-              className="text-orange-300 no-underline font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
-              title="Faculdade Das Américas"
-            >
-              <a href="https://www.vemprafam.com.br/" target="_blank">
-                {`<`}FAM{`/>`}
-              </a>{" "}
-            </abbr>
-            - São Paulo - Brasil
-          </address>
+          na Faculdade Das Américas{" "}
+          <abbr
+            className="text-orange-300 no-underline font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
+            title="Faculdade Das Américas"
+          >
+            <a href="https://www.vemprafam.com.br/" target="_blank">
+              {`<`}FAM{`/>`}
+            </a>{" "}
+          </abbr>
+          - São Paulo - Brasil
         </Text>
         <Text>
           Atualmente estou disponível para oportunidades de trabalhar com{" "}

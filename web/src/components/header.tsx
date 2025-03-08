@@ -74,6 +74,16 @@ export default function Header({ sectionRefs }: HeaderProps) {
             <span className="hidden md:block">Sobre</span>
           </li>
           <li
+            title="Certificados"
+            aria-label="Seção de certificados"
+            className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
+            onClick={() => handleNavigation(sectionRefs.certificates)}
+            tabIndex={6}
+          >
+            <TbTrophy className="md:hidden" />
+            <span className="hidden md:block">Certificados</span>
+          </li>
+          <li
             title="Sobre Meu Trabalho"
             aria-label="Seção sobre meu trabalho"
             className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
@@ -92,16 +102,6 @@ export default function Header({ sectionRefs }: HeaderProps) {
           >
             <TbCode className="md:hidden" />
             <span className="hidden md:block">Projetos</span>
-          </li>
-          <li
-            title="Certificados"
-            aria-label="Seção de certificados"
-            className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
-            onClick={() => handleNavigation(sectionRefs.certificates)}
-            tabIndex={6}
-          >
-            <TbTrophy className="md:hidden" />
-            <span className="hidden md:block">Certificados</span>
           </li>
         </ul>
       </nav>

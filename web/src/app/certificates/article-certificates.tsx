@@ -160,14 +160,14 @@ export function ArticleCertificates() {
       <ul className="w-full max-sm:max-w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-2">
         <AnimatePresence>
           {displayedCertificates.map((certificate, index) => (
-            <motion.li
+            <motion.li // Mantém motion.li aqui
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3 }}
             >
-              <Card
+              <Card // Card agora é um div
                 src={certificate.src}
                 title={certificate.title}
                 institution={certificate.institution}

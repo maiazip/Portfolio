@@ -10,7 +10,7 @@ interface CardProps {
   title: string;
   description: string;
   technologies: string[];
-  link: string; // Adicionado a propriedade link
+  link: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -18,9 +18,9 @@ const Card: React.FC<CardProps> = ({
   title,
   description,
   technologies,
-  link, // Recebendo a propriedade link
+  link,
 }) => {
-  const ref = useRef<HTMLLIElement>(null);
+  const ref = useRef<HTMLDivElement>(null); // Mudado para HTMLDivElement
   const isInView = useInView(ref, { once: true });
 
   const variants: Variants = {
@@ -29,19 +29,19 @@ const Card: React.FC<CardProps> = ({
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.3, // Animação mais rápida
+        duration: 0.3,
         ease: "easeInOut",
       },
     },
   };
 
   return (
-    <motion.li
+    <motion.div // Mudado para motion.div
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
-      className=" w-full h-fit max-w-96 flex flex-col items-center justify-center px-2 py-1 gap-1 rounded-lg bg-gradient-to-tl even:bg-gradient-to-tr from-indigo-400 to-violet-950 border-2 border-indigo-400/50 hover:shadow-md shadow-orange-300 border-opacity-60 hover:scale-95 hover:rotate-6 even:hover:-rotate-6 transition-all"
+      className="w-full h-fit max-w-96 flex flex-col items-center justify-center px-2 py-1 gap-1 rounded-lg bg-gradient-to-tl even:bg-gradient-to-tr from-indigo-400 to-violet-950 border-2 border-indigo-400/50 hover:shadow-md shadow-orange-300 border-opacity-60 hover:scale-95 hover:rotate-6 even:hover:-rotate-6 transition-all"
     >
       <a className="w-full h-full text-center" href={link} target="_blank">
         <h1 className="text-xl md:text-2xl lg:text-3xl text-yellow-200">
@@ -63,14 +63,18 @@ const Card: React.FC<CardProps> = ({
             <span
               key={index}
               className="bg-indigo-950/60 text-lime-300 capitalize rounded-full px-2 py-1 text-sm"
-              aria-label={`Tecnologia: ${tech}`} // Adicionado aria-label
+              aria-label={`Tecnologia: ${tech}`}
             >
               {tech}
             </span>
           ))}
         </div>
+        <div className="flex flex-row justify-center items-center gap-2">
+          <TbBrandGithub size={24} />
+          <TbDeviceDesktop size={24} />
+        </div>
       </a>
-    </motion.li>
+    </motion.div> // Mudado para motion.div
   );
 };
 

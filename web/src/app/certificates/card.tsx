@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({
   hours,
   date,
 }) => {
-  const ref = useRef<HTMLLIElement>(null);
+  const ref = useRef<HTMLDivElement>(null); // Mudado para HTMLDivElement
   const isInView = useInView(ref, { once: true });
 
   const variants: Variants = {
@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = ({
   };
 
   return (
-    <motion.li
+    <motion.div // Mudado para motion.div
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -43,7 +43,7 @@ const Card: React.FC<CardProps> = ({
       className="w-full h-fit max-w-96 flex flex-col items-center justify-center px-2 py-1 gap-1 rounded-lg bg-gradient-to-tl even:bg-gradient-to-tr from-indigo-400 to-violet-950 border-2 border-indigo-400/50 hover:shadow-md shadow-orange-300 border-opacity-60 hover:scale-95 hover:rotate-6 even:hover:-rotate-6 transition-all"
     >
       <a
-        href={src} // Usando o src como href
+        href={src}
         target="_blank"
         rel="noopener noreferrer"
         className="w-full flex flex-col items-center text-center"
@@ -70,7 +70,7 @@ const Card: React.FC<CardProps> = ({
           </p>
         </div>
       </a>
-    </motion.li>
+    </motion.div> // Mudado para motion.div
   );
 };
 
