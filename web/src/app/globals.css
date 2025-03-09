@@ -4,13 +4,13 @@
   --font-heading: var(--font-oxanium);
   --font-sans: var(--font-montserrat);
 }
-/* 
+
 ::-webkit-scrollbar {
-  background: transparent;
+  background-color: #2e1065;
   width: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fef08a;
+  background: #a78bfa60;
   border-radius: 4rem;
-} */
+}

@@ -19,7 +19,7 @@ export default function Home() {
   const certificatesRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
 
   return (
-    <main className="w-full max-w-screen h-fit min-h-dvh flex flex-col items-center justify-baseline scroll-smooth select-none overflow-x-hidden">
+    <main className="w-full max-w-screen h-fit min-h-dvh flex flex-col items-center justify-baseline scroll-smooth select-none overflow-y-hidden">
       <Header
         sectionRefs={{
           hero: heroRef,
