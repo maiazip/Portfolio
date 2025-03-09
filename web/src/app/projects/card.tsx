@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({
   technologies,
   link,
 }) => {
-  const ref = useRef<HTMLDivElement>(null); // Mudado para HTMLDivElement
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
 
   const variants: Variants = {
@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({
   };
 
   return (
-    <motion.div // Mudado para motion.div
+    <motion.div
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -54,11 +54,11 @@ const Card: React.FC<CardProps> = ({
           width={400}
           height={400}
         />
-        <p className="w-full h-32 text-center place-content-center break-word overflow-scroll bg-indigo-950/50 rounded-md p-2 overflow-x-hidden">
+        <p className="description-scroll w-full h-32 text-center place-content-center break-word overflow-y-scroll bg-indigo-950/50 rounded-md p-2 overflow-x-hidden">
           {description}
         </p>
 
-        <div className="w-full h-17 overflow-y-scroll flex flex-row flex-wrap justify-center items-center gap-1 p-1">
+        <div className="technologies-scroll w-full h-17 overflow-y-scroll flex flex-row flex-wrap justify-center items-center gap-1 p-1">
           {technologies.map((tech, index) => (
             <span
               key={index}
@@ -69,12 +69,8 @@ const Card: React.FC<CardProps> = ({
             </span>
           ))}
         </div>
-        <div className="flex flex-row justify-center items-center gap-2">
-          <TbBrandGithub size={24} />
-          <TbDeviceDesktop size={24} />
-        </div>
       </a>
-    </motion.div> // Mudado para motion.div
+    </motion.div>
   );
 };
 
