@@ -11,15 +11,19 @@ import Footer from "@/components/footer";
 import { useRef } from "react";
 
 export default function Home() {
-  const heroRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
-  const introRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
-  const aboutRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
-  const workRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
-  const projectsRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
-  const certificatesRef = useRef<HTMLElement | null>(null); // Correção: adicionado null
+  // Referências para as seções para navegação e acessibilidade
+  const heroRef = useRef<HTMLElement | null>(null);
+  const introRef = useRef<HTMLElement | null>(null);
+  const aboutRef = useRef<HTMLElement | null>(null);
+  const workRef = useRef<HTMLElement | null>(null);
+  const projectsRef = useRef<HTMLElement | null>(null);
+  const certificatesRef = useRef<HTMLElement | null>(null);
 
   return (
-    <main className="w-full max-w-screen h-fit min-h-dvh flex flex-col items-center justify-baseline scroll-smooth select-none overflow-y-hidden">
+    <main
+      className="w-full max-w-screen h-fit min-h-dvh flex flex-col items-center justify-start scroll-smooth select-none overflow-hidden" // Responsividade: justify-baseline -> justify-start para alinhamento no topo
+      id="main-content" // Acessibilidade: ID para referência principal de conteúdo
+    >
       <Header
         sectionRefs={{
           hero: heroRef,

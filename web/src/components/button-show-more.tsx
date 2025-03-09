@@ -31,6 +31,8 @@ export function ButtonShowMore({
     return null; // Não renderiza o botão se não houver mais itens e se não estiverem todos sendo mostrados
   }
 
+  const expanded = isAllItemsShown; // Acessibilidade: Variável para aria-expanded
+
   return (
     <motion.button
       ref={buttonRef}
@@ -39,6 +41,8 @@ export function ButtonShowMore({
       animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
       transition={{ duration: 0.3 }}
       onClick={isAllItemsShown ? showLess : showMore}
+      aria-expanded={expanded} // Acessibilidade: Aria-expanded para indicar estado de expansão
+      aria-controls="items-container" // Acessibilidade: Aria-controls para associar ao container de itens (substituir 'items-container' pelo ID real)
     >
       {isAllItemsShown ? "Exibir Menos" : "Exibir Mais"}
     </motion.button>

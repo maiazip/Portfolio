@@ -18,7 +18,7 @@ export function Title({ children }: TitleProps) {
   };
 
   return (
-    <motion.h1
+    <motion.h1 // Now directly using motion.h1 - SIMPLIFIED
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}

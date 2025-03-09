@@ -119,7 +119,10 @@ export function ArticleProjects() {
   const displayedProjects = projectsData.slice(0, ToShow);
 
   return (
-    <article className="w-full h-full flex flex-col items-center justify-start gap-2">
+    <article
+      className="w-full h-full flex flex-col items-center justify-start gap-2"
+      aria-label="Lista de Projetos" // Aria-label for article - ADDED
+    >
       <ul className="w-full max-sm:max-w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-2">
         <AnimatePresence>
           {displayedProjects.map((project, index) => (
@@ -130,12 +133,15 @@ export function ArticleProjects() {
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3 }}
             >
-              <Card // Card agora é um div
+              <Card // Card component with altText prop - IMPROVED
                 src={project.src}
                 title={project.title}
                 description={project.description}
                 technologies={project.technologies}
                 link={project.link}
+                altText={`Imagem de prévia do projeto ${
+                  project.title
+                }. Descrição: ${project.description.substring(0, 100)}...`} // Example altText - IMPROVED - NEEDS REVIEW
               />
             </motion.li>
           ))}

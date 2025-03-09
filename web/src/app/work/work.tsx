@@ -16,10 +16,15 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="work"
       className="w-full max-w-screen-lg min-h-fit flex flex-col items-center justify-start p-8 gap-2"
+      aria-label="Seção Sobre Meu Trabalho" // Acessibilidade: Aria-label para a section
     >
-      <Icon icon={<TbBriefcase />} />
+      <Icon icon={<TbBriefcase />} ariaHidden={true} />{" "}
+      {/* Acessibilidade: Aria-hidden para ícone decorativo */}
       <Title>Sobre meu trabalho</Title>
-      <Illustration src={svg} />
+      <Illustration
+        src={svg}
+        alt="Ilustração da seção sobre meu trabalho" // Acessibilidade: Alt text para ilustração
+      />
       <AnimatedSubtitle
         texts={[
           "Intuitivo",
@@ -30,7 +35,10 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
           "Conceitual",
         ]}
       />
-      <article className="w-full">
+      <article
+        className="w-full"
+        aria-label="Descrição sobre a metodologia de trabalho" // Acessibilidade: Aria-label para o article
+      >
         <Divider />
         <Text>
           Harmonia e Intuitividade moldam a metodologia que aplico em meus

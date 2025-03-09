@@ -24,12 +24,14 @@ const Hero = forwardRef<HTMLElement, HeroProps>(
           initial={{ y: -500 }}
           animate={{ y: 0 }}
           transition={{ duration: 1 }}
+          aria-hidden="true" // Acessibilidade: Elementos decorativos escondidos de leitores de tela
         >
           <Image
             className="object-cover"
             src="/planet.svg"
             fill={true}
-            alt="Svg Illustration"
+            alt="Planeta estilizado em SVG, parte do fundo da seção Hero." // Acessibilidade e SEO: Alt text descritivo
+            priority // Performance: Priorizando carregamento da imagem principal
           />
         </motion.span>
         <motion.span
@@ -37,12 +39,14 @@ const Hero = forwardRef<HTMLElement, HeroProps>(
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           transition={{ duration: 1.5 }}
+          aria-hidden="true" // Acessibilidade: Elementos decorativos escondidos de leitores de tela
         >
           <Image
             className="object-cover"
             src="/clouds.svg"
             fill={true}
-            alt="Svg Illustration"
+            alt="Nuvens estilizadas em SVG, elemento de fundo da seção Hero." // Acessibilidade e SEO: Alt text descritivo
+            priority // Performance: Priorizando carregamento da imagem principal
           />
         </motion.span>
         <motion.span
@@ -50,12 +54,13 @@ const Hero = forwardRef<HTMLElement, HeroProps>(
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 2 }}
+          aria-hidden="true" // Acessibilidade: Elementos decorativos escondidos de leitores de tela
         >
           <Image
             className="object-cover"
             src="/rocks.svg"
             fill={true}
-            alt="Svg Illustration"
+            alt="Rochas estilizadas em SVG, parte inferior do cenário da seção Hero." // Acessibilidade e SEO: Alt text descritivo
           />
         </motion.span>
         <motion.span
@@ -63,12 +68,13 @@ const Hero = forwardRef<HTMLElement, HeroProps>(
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
+          aria-hidden="true" // Acessibilidade: Elementos decorativos escondidos de leitores de tela
         >
           <Image
             className="object-cover"
             src="/plants.svg"
             fill={true}
-            alt="Svg Illustration"
+            alt="Plantas estilizadas em SVG, detalhe decorativo na seção Hero." // Acessibilidade e SEO: Alt text descritivo
           />
         </motion.span>
         <motion.span
@@ -76,12 +82,13 @@ const Hero = forwardRef<HTMLElement, HeroProps>(
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           transition={{ duration: 1 }}
+          aria-hidden="true" // Acessibilidade: Elementos decorativos escondidos de leitores de tela
         >
           <Image
             className="object-cover"
             src="/floor.svg"
             fill={true}
-            alt="Svg Illustration"
+            alt="Chão estilizado em SVG, base da ilustração da seção Hero." // Acessibilidade e SEO: Alt text descritivo
           />
         </motion.span>
       </section>

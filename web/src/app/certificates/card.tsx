@@ -4,12 +4,18 @@ import Image from "next/image";
 import { motion, useInView, Variants } from "framer-motion";
 import React, { useRef } from "react";
 
+// Utility component for visually hidden text
+const VisuallyHidden = ({ children }: { children: React.ReactNode }) => {
+  return <span className="visually-hidden">{children}</span>;
+};
+
 interface CardProps {
   src: string;
   title: string;
   institution: string;
   hours: string;
   date: string;
+  altText: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -18,8 +24,9 @@ const Card: React.FC<CardProps> = ({
   institution,
   hours,
   date,
+  altText,
 }) => {
-  const ref = useRef<HTMLDivElement>(null); // Mudado para HTMLDivElement
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
 
   const variants: Variants = {
@@ -35,7 +42,7 @@ const Card: React.FC<CardProps> = ({
   };
 
   return (
-    <motion.div // Mudado para motion.div
+    <motion.div
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -47,14 +54,18 @@ const Card: React.FC<CardProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         className="w-full flex flex-col items-center text-center"
+        aria-label={`Ver certificado de ${title} da instituição ${institution} em nova aba`}
       >
+        <VisuallyHidden>
+          Ver certificado de {title} da instituição {institution} em nova aba
+        </VisuallyHidden>
         <h1 className=" text-lg md:text-xl lg:text-2xl text-yellow-200">
           {title}
         </h1>
         <Image
           className="object-cover rounded w-96 h-48"
           src={src}
-          alt={title}
+          alt={altText}
           width={400}
           height={400}
         />
@@ -70,7 +81,7 @@ const Card: React.FC<CardProps> = ({
           </p>
         </div>
       </a>
-    </motion.div> // Mudado para motion.div
+    </motion.div>
   );
 };
 

@@ -16,13 +16,13 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
     <section
       ref={ref}
       id="intro"
-      className="w-full max-w-screen-lg min-h-fit flex flex-col items-center justify-start p-8 gap-1 "
+      className="w-full max-w-screen-lg min-h-fit flex flex-col items-center justify-start p-8 gap-1"
     >
       <Icon icon={<TbDeviceDesktop />} />
       <Title>Portfolio Website</Title>
-      <Illustration src={svg} />
+      <Illustration src={svg} ariaHidden={true} />
       <AnimatedSubtitle
-        texts={["Desenvolvido Por Matheus Maia", " Desenvolvido Por @maia.zip"]}
+        texts={["Desenvolvido Por @maia.zip", "  Desenvolvido Por @maia.zip"]}
       />
       <Text>Utilizando as tecnologias</Text>
       <Icon icon={<TbArrowDownRhombus />} />

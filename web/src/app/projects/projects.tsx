@@ -15,10 +15,15 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="projects"
       className="w-full max-w-screen-lg min-h-fit flex flex-col items-center justify-start p-8 gap-2"
+      aria-label="Seção de Projetos" // Acessibilidade: Aria-label para a section
     >
-      <Icon icon={<TbCode />} />
+      <Icon icon={<TbCode />} ariaHidden={true} />{" "}
+      {/* Acessibilidade: Aria-hidden para ícone decorativo */}
       <Title>Projetos</Title>
-      <Illustration src={svg} />
+      <Illustration
+        src={svg}
+        alt="Ilustração da seção de Projetos" // Acessibilidade: Alt text para ilustração
+      />
       <AnimatedSubtitle
         texts={["Galeria de Projetos", "Vitrine de repositórios"]}
       />

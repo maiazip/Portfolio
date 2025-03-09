@@ -12,9 +12,11 @@ import { motion, useInView } from "framer-motion";
 
 interface IconProps {
   icon: ReactNode;
+  ariaHidden?: boolean; // Acessibilidade: Prop para controlar aria-hidden (opcional)
 }
 
-const Icon: React.FC<IconProps> = ({ icon }) => {
+const Icon: React.FC<IconProps> = ({ icon, ariaHidden = true }) => {
+  // Acessibilidade: Default ariaHidden agora é true
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
 
@@ -28,6 +30,7 @@ const Icon: React.FC<IconProps> = ({ icon }) => {
 
   if (isValidElement(icon)) {
     const element = icon as ReactElement<HTMLAttributes<HTMLElement>>;
+    const elementClassName = element.props?.className || "";
 
     return (
       <motion.span
@@ -35,11 +38,10 @@ const Icon: React.FC<IconProps> = ({ icon }) => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={variants}
+        aria-hidden={ariaHidden} // Acessibilidade: Condicionalmente aplica aria-hidden
       >
         {cloneElement(element, {
-          className: `${
-            element.props?.className ? element.props.className + " " : ""
-          }${fixedClassName}`,
+          className: `${elementClassName} ${fixedClassName}`.trim(),
         })}
       </motion.span>
     );
@@ -51,6 +53,7 @@ const Icon: React.FC<IconProps> = ({ icon }) => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
+      aria-hidden={ariaHidden} // Acessibilidade: Condicionalmente aplica aria-hidden
     >
       <span>{icon}</span>
     </motion.span>

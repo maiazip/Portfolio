@@ -40,68 +40,102 @@ export default function Header({ sectionRefs }: HeaderProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
+      role="banner" // Semântica e Acessibilidade: Define o header como banner
     >
-      <nav className="w-10/12 max-w-screen-lg h-full flex items-center justify-center rounded-b-full bg-gradient-to-b from-violet-900/100 to-violet-900/30 backdrop-blur backdrop-brightness-50 px-2 shadow shadow-violet-500/100">
+      <nav
+        className="w-10/12 max-w-screen-lg h-full flex items-center justify-center rounded-b-full bg-gradient-to-b from-violet-900/100 to-violet-900/30 backdrop-blur backdrop-brightness-50 px-2 shadow shadow-violet-500/100"
+        aria-label="Navegação principal" // Acessibilidade: Label para a navegação
+      >
         <ul className="w-full h-full flex flex-row items-center justify-evenly max-md:text-2xl select-none">
-          <li
-            title="Início"
-            aria-label="Seção Inicial"
-            className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
-            onClick={() => handleNavigation(sectionRefs.hero)}
-            tabIndex={1}
-          >
-            <TbHome className="md:hidden" />
-            <span className="hidden md:block">Início</span>
+          <li className="group">
+            {" "}
+            {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
+            <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
+              title="Início"
+              aria-label="Ir para a seção inicial"
+              className="group-hover:scale-95 group-hover:text-yellow-200 cursor-pointer flex flex-col items-center justify-center" // Acessibilidade: Removido hover:cursor-pointer e adicionado no container <button>
+              onClick={() => handleNavigation(sectionRefs.hero)}
+              tabIndex={0} // Acessibilidade: tabIndex 0 para elementos interativos
+            >
+              <TbHome className="md:hidden" aria-hidden="true" />{" "}
+              {/* Acessibilidade: aria-hidden em ícones decorativos */}
+              <span className="hidden md:block">Início</span>
+            </button>
           </li>
-          <li
-            title="Introdução"
-            aria-label="Seção de Introdução"
-            className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
-            onClick={() => handleNavigation(sectionRefs.intro)}
-            tabIndex={2}
-          >
-            <TbAppWindow className="md:hidden" />
-            <span className="hidden md:block">Introdução</span>
+          <li className="group">
+            {" "}
+            {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
+            <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
+              title="Introdução"
+              aria-label="Ir para a seção de introdução"
+              className="group-hover:scale-95 group-hover:text-yellow-200 cursor-pointer flex flex-col items-center justify-center" // Acessibilidade: Removido hover:cursor-pointer e adicionado no container <button>
+              onClick={() => handleNavigation(sectionRefs.intro)}
+              tabIndex={0} // Acessibilidade: tabIndex 0 para elementos interativos
+            >
+              <TbAppWindow className="md:hidden" aria-hidden="true" />{" "}
+              {/* Acessibilidade: aria-hidden em ícones decorativos */}
+              <span className="hidden md:block">Introdução</span>
+            </button>
           </li>
-          <li
-            title="Sobre mim"
-            aria-label="Seção Sobre Mim"
-            className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
-            onClick={() => handleNavigation(sectionRefs.about)}
-            tabIndex={3}
-          >
-            <TbUser className="md:hidden" />
-            <span className="hidden md:block">Sobre</span>
+          <li className="group">
+            {" "}
+            {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
+            <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
+              title="Sobre mim"
+              aria-label="Ir para a seção sobre mim"
+              className="group-hover:scale-95 group-hover:text-yellow-200 cursor-pointer flex flex-col items-center justify-center" // Acessibilidade: Removido hover:cursor-pointer e adicionado no container <button>
+              onClick={() => handleNavigation(sectionRefs.about)}
+              tabIndex={0} // Acessibilidade: tabIndex 0 para elementos interativos
+            >
+              <TbUser className="md:hidden" aria-hidden="true" />{" "}
+              {/* Acessibilidade: aria-hidden em ícones decorativos */}
+              <span className="hidden md:block">Sobre</span>
+            </button>
           </li>
-          <li
-            title="Certificados"
-            aria-label="Seção de certificados"
-            className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
-            onClick={() => handleNavigation(sectionRefs.certificates)}
-            tabIndex={6}
-          >
-            <TbTrophy className="md:hidden" />
-            <span className="hidden md:block">Certificados</span>
+          <li className="group">
+            {" "}
+            {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
+            <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
+              title="Certificados"
+              aria-label="Ir para a seção de certificados"
+              className="group-hover:scale-95 group-hover:text-yellow-200 cursor-pointer flex flex-col items-center justify-center" // Acessibilidade: Removido hover:cursor-pointer e adicionado no container <button>
+              onClick={() => handleNavigation(sectionRefs.certificates)}
+              tabIndex={0} // Acessibilidade: tabIndex 0 para elementos interativos
+            >
+              <TbTrophy className="md:hidden" aria-hidden="true" />{" "}
+              {/* Acessibilidade: aria-hidden em ícones decorativos */}
+              <span className="hidden md:block">Certificados</span>
+            </button>
           </li>
-          <li
-            title="Sobre Meu Trabalho"
-            aria-label="Seção sobre meu trabalho"
-            className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
-            onClick={() => handleNavigation(sectionRefs.work)}
-            tabIndex={4}
-          >
-            <TbBriefcase className="md:hidden" />
-            <span className="hidden md:block">Trabalho</span>
+          <li className="group">
+            {" "}
+            {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
+            <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
+              title="Sobre Meu Trabalho"
+              aria-label="Ir para a seção sobre meu trabalho"
+              className="group-hover:scale-95 group-hover:text-yellow-200 cursor-pointer flex flex-col items-center justify-center" // Acessibilidade: Removido hover:cursor-pointer e adicionado no container <button>
+              onClick={() => handleNavigation(sectionRefs.work)}
+              tabIndex={0} // Acessibilidade: tabIndex 0 para elementos interativos
+            >
+              <TbBriefcase className="md:hidden" aria-hidden="true" />{" "}
+              {/* Acessibilidade: aria-hidden em ícones decorativos */}
+              <span className="hidden md:block">Trabalho</span>
+            </button>
           </li>
-          <li
-            title="Projetos"
-            aria-label="Seção de projetos"
-            className="hover:scale-95 hover:text-yellow-200 hover:cursor-pointer"
-            onClick={() => handleNavigation(sectionRefs.projects)}
-            tabIndex={5}
-          >
-            <TbCode className="md:hidden" />
-            <span className="hidden md:block">Projetos</span>
+          <li className="group">
+            {" "}
+            {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
+            <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
+              title="Projetos"
+              aria-label="Ir para a seção de projetos"
+              className="group-hover:scale-95 group-hover:text-yellow-200 cursor-pointer flex flex-col items-center justify-center" // Acessibilidade: Removido hover:cursor-pointer e adicionado no container <button>
+              onClick={() => handleNavigation(sectionRefs.projects)}
+              tabIndex={0} // Acessibilidade: tabIndex 0 para elementos interativos
+            >
+              <TbCode className="md:hidden" aria-hidden="true" />{" "}
+              {/* Acessibilidade: aria-hidden em ícones decorativos */}
+              <span className="hidden md:block">Projetos</span>
+            </button>
           </li>
         </ul>
       </nav>

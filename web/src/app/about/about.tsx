@@ -17,10 +17,13 @@ const About = forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
       id="about"
       className="w-full max-w-screen-lg min-h-fit flex flex-col items-center justify-start text-center p-8 gap-1"
+      aria-label="Seção sobre mim" // Acessibilidade: Aria-label para a section "Sobre mim"
     >
-      <Icon icon={<TbUser />} />
+      <Icon icon={<TbUser />} ariaHidden={true} />{" "}
+      {/* Acessibilidade: Aria-hidden para ícone decorativo */}
       <Title>Sobre mim</Title>
-      <Illustration src={svg} />
+      <Illustration src={svg} alt="Ilustração sobre a seção sobre mim" />{" "}
+      {/* Acessibilidade: Alt text para a ilustração */}
       <AnimatedSubtitle
         texts={[
           "Desenvolvedor",
@@ -30,7 +33,6 @@ const About = forwardRef<HTMLElement>((props, ref) => {
           "Criador de conteúdo",
         ]}
       />
-
       <article className="w-full">
         <Divider />
         <Text>
@@ -38,7 +40,9 @@ const About = forwardRef<HTMLElement>((props, ref) => {
           <a
             href="https://www.linkedin.com/in/maiazip/"
             target="_blank"
+            rel="noopener noreferrer" // Segurança e performance: Adicionado rel="noopener noreferrer"
             className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
+            aria-label="LinkedIn de Matheus Maia Bastos (abre em nova janela)" // Acessibilidade: Aria-label para o link
           >
             Matheus Maia Bastos
           </a>{" "}
@@ -57,6 +61,8 @@ const About = forwardRef<HTMLElement>((props, ref) => {
             className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
             href="https://g.co/kgs/wKcSPTY"
             target="_blank"
+            rel="noopener noreferrer" // Segurança e performance: Adicionado rel="noopener noreferrer"
+            aria-label="Localização de Fortaleza no Google Maps (abre em nova janela)" // Acessibilidade: Aria-label para o link
           >
             Fortaleza
           </a>
@@ -77,7 +83,12 @@ const About = forwardRef<HTMLElement>((props, ref) => {
             className="text-orange-300 no-underline font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
             title="Faculdade Das Américas"
           >
-            <a href="https://www.vemprafam.com.br/" target="_blank">
+            <a
+              href="https://www.vemprafam.com.br/"
+              target="_blank"
+              rel="noopener noreferrer" // Segurança e performance: Adicionado rel="noopener noreferrer"
+              aria-label="Site da Faculdade Das Américas (FAM) (abre em nova janela)" // Acessibilidade: Aria-label para o link
+            >
               {`<`}FAM{`/>`}
             </a>{" "}
           </abbr>
@@ -96,7 +107,6 @@ const About = forwardRef<HTMLElement>((props, ref) => {
         </Text>
         <Divider />
       </article>
-
       <ArticleCv />
     </section>
   );

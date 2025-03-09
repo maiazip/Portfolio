@@ -46,6 +46,9 @@ const AnimatedSubtitle: React.FC<AnimatedSubtitleProps> = ({
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
       style={{ display: "inline-block" }}
+      role="region" // Acessibilidade: Role region para identificar como região de conteúdo
+      aria-live="polite" // Acessibilidade: Aria-live polite para anunciar mudanças de texto
+      aria-label="Subtítulo animado" // Acessibilidade: Aria-label para o container
     >
       <TypeAnimation
         ref={typeAnimationRef}
