@@ -74,7 +74,7 @@ const Card: React.FC<CardProps> = ({
         <p className="description-scroll w-full h-32 text-center place-content-center break-word overflow-y-scroll bg-indigo-950/50 rounded-md p-2 overflow-x-hidden">
           {description}
         </p>
-        <div className="technologies-scroll w-full h-17 overflow-y-scroll flex flex-row flex-wrap justify-center items-center gap-1 p-1">
+        <div className="technologies-scroll w-full h-17 overflow-y-scroll flex flex-row flex-wrap justify-center items-center gap-1 pt-1">
           {technologies.map((tech, index) => (
             <span
               key={index}
