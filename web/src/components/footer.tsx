@@ -60,7 +60,7 @@ export default function Footer() {
           </li>
           <li className="w-fit h-fit flex flex-row gap-1 items-center justify-center transition-all duration-300 hover:scale-95 hover:text-lime-300">
             <a
-              href="https://www.example.com/portfolio" // Substituir pelo link correto do portfólio online
+              href="https://maiazip.github.io/LinkTree/" // Substituir pelo link correto do portfólio online
               target="_blank"
               rel="noopener noreferrer" // Segurança e performance: Adicionado rel="noopener noreferrer"
               aria-label="Link para o portfólio online" // Acessibilidade: Aria-label para o link
@@ -108,7 +108,7 @@ export default function Footer() {
           <li>
             <a
               className="w-fit h-fit flex flex-row gap-1 items-center justify-center transition-all duration-300 hover:scale-95 hover:text-lime-300"
-              href="mailto:maiazip@hotmail.com"
+              href="mailto:maia.zip@hotmail.com"
               aria-label="Enviar email para maiazip@hotmail.com" // Acessibilidade: Aria-label para o link
             >
               <TbMail

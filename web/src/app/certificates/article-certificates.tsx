@@ -192,7 +192,7 @@ export function ArticleCertificates() {
       className="w-full h-full flex flex-col items-center justify-start gap-2"
       aria-label="Lista de Certificações"
     >
-      <ul className="w-full max-sm:max-w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-2">
+      <ul className="w-full max-sm:max-w-11/12 grid grid-cols-1 lg:grid-cols-3 place-items-center gap-2">
         <AnimatePresence>
           {displayedCertificates.map((certificate, index) => (
             <motion.li

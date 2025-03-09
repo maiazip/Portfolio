@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const projectsData = [
   {
     src: "https://raw.githubusercontent.com/maiazip/Portfolio/main/previewDesktop.png",
-    link: "https://github.com/maiazip/Upbuddy",
+    link: "https://github.com/maiazip/Portfolio",
     title: "Portfolio",
     description: "Algo me diz que você conhece este Website de algum lugar...",
     technologies: [
@@ -50,7 +50,7 @@ const projectsData = [
   },
   {
     src: "https://github.com/maiazip/AudioNotes/raw/master/.github/previewWeb.png",
-    link: "https://github.com/maiazip/Portfolio",
+    link: "https://github.com/maiazip/AudioNotes",
     title: "AudioNotes",
     description:
       "Projeto FullStack que Através da API Speech Recognition e outras tecnologias listadas abaixo permite que o usuário crie e armazene anotações gravadas em áudio que serão transcritas para textos",
@@ -93,15 +93,9 @@ const projectsData = [
     src: "https://github.com/maiazip/LinkTree/raw/main/.github/preview-desktop.png",
     link: "https://github.com/maiazip/LinkTree",
     title: "LinkTree",
-    description: "Algo me diz que você conhece este Website...",
-    technologies: [
-      "React",
-      "Next.js",
-      "Tailwind.css",
-      "Typescript",
-      "Javascript",
-      "Motion",
-    ],
+    description:
+      "Projeto simples que reúne todos os links de um usuário em uma só página, um de meus primeiros projetos que me ajudou a chegar onde cheguei hoje, utilizando a trindade pura da internet, html, css, javascript.",
+    technologies: ["Javascript", "Css", "Html"],
   },
 ];
 
@@ -123,7 +117,7 @@ export function ArticleProjects() {
       className="w-full h-full flex flex-col items-center justify-start gap-2"
       aria-label="Lista de Projetos" // Aria-label for article - ADDED
     >
-      <ul className="w-full max-sm:max-w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-2">
+      <ul className="w-full max-sm:max-w-11/12 grid grid-cols-1  lg:grid-cols-3 place-items-center gap-2">
         <AnimatePresence>
           {displayedProjects.map((project, index) => (
             <motion.li // Mantém motion.li aqui
