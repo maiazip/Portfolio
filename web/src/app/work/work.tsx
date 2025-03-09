@@ -30,7 +30,7 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
           "Conceitual",
         ]}
       />
-      <article>
+      <article className="w-full">
         <Divider />
         <Text>
           Harmonia e Intuitividade moldam a metodologia que aplico em meus

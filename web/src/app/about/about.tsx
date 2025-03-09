@@ -31,7 +31,7 @@ const About = forwardRef<HTMLElement>((props, ref) => {
         ]}
       />
 
-      <article>
+      <article className="w-full">
         <Divider />
         <Text>
           Olá forma de vida senciente, eu me chamo{" "}
