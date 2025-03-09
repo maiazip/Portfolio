@@ -47,7 +47,7 @@ const Card: React.FC<CardProps> = ({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
-      className="w-full h-fit max-w-96 flex flex-col items-center justify-center px-2 py-1 gap-1 rounded-lg bg-gradient-to-tl even:bg-gradient-to-tr from-indigo-400 to-violet-950 border-2 border-indigo-400/50 hover:shadow-md shadow-orange-300 border-opacity-60 hover:scale-95 hover:rotate-6 even:hover:-rotate-6 transition-all"
+      className="w-full h-fit max-w-96 flex flex-col items-center justify-center px-2 py-1 gap-1 rounded-lg bg-gradient-to-tl even:bg-gradient-to-tr from-violet-400 to-indigo-950 border-2 border-violet-400/50 hover:shadow-md shadow-orange-300 border-opacity-60 hover:scale-95 hover:rotate-6 even:hover:-rotate-6 transition-all"
     >
       <a
         href={src}

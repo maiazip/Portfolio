@@ -36,7 +36,7 @@ export function ButtonShowMore({
   return (
     <motion.button
       ref={buttonRef}
-      className="p-1 w-2/5 min-w-32 font-heading font-semibold text-sm md:text-base lg:text-lg bg-gradient-to-bl odd:bg-gradient-to-br from-indigo-400 to-violet-950 border-2 border-indigo-400/80 hover:scale-95 hover:text-yellow-200 transition-all duration-300"
+      className="p-1 w-2/5 min-w-32 font-heading font-semibold text-sm md:text-base lg:text-lg bg-gradient-to-bl odd:bg-gradient-to-br from-violet-400 to-indigo-950 border-2 border-violet-400/80 hover:scale-95 hover:text-yellow-200 transition-all duration-300"
       initial={{ scale: 0, opacity: 0 }}
       animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
       transition={{ duration: 0.3 }}

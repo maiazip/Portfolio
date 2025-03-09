@@ -58,7 +58,7 @@ export function ArticleCv(props: ArticleCvProps) {
           initial="hiddenLeft"
           whileInView="visible"
           viewport={{ once: true }}
-          className="p-1 w-1/3 min-w-32 font-heading font-semibold text-white text-sm md:text-base lg:text-lg bg-gradient-to-bl odd:bg-gradient-to-br from-indigo-400 to-violet-950 border-2 border-indigo-400/80 hover:scale-95 transition-all duration-300 hover:text-yellow-200"
+          className="p-1 w-1/3 min-w-32 font-heading font-semibold text-white text-sm md:text-base lg:text-lg bg-gradient-to-br odd:bg-gradient-to-bl from-violet-400 to-indigo-950 border-2 border-violet-400/80 hover:scale-95 transition-all duration-300 hover:text-yellow-200"
           onClick={handleShowCv}
           tabIndex={8}
           aria-expanded={showCv} // Acessibilidade: Aria-expanded para indicar se o CV está visível
@@ -72,7 +72,7 @@ export function ArticleCv(props: ArticleCvProps) {
           initial="hiddenRight"
           whileInView="visible"
           viewport={{ once: true }}
-          className="p-1 w-1/3 min-w-32 font-heading font-semibold text-white text-sm md:text-base lg:text-lg bg-gradient-to-bl odd:bg-gradient-to-br from-indigo-400 to-violet-950 border-2 border-indigo-400/80 hover:scale-95 transition-all duration-300 hover:text-yellow-200"
+          className="p-1 w-1/3 min-w-32 font-heading font-semibold text-white text-sm md:text-base lg:text-lg bg-gradient-to-br odd:bg-gradient-to-bl from-violet-400 to-indigo-950 border-2 border-violet-400/80 hover:scale-95 transition-all duration-300 hover:text-yellow-200"
           onClick={handleDownloadCv}
           aria-label="Baixar Currículo como imagem PNG"
           tabIndex={9}
@@ -92,7 +92,7 @@ export function ArticleCv(props: ArticleCvProps) {
       >
         <button
           title="Fechar Currículo"
-          className="p-2 text-lg w-full font-heading font-semibold bg-gradient-to-bl odd:bg-gradient-to-br from-indigo-400 to-violet-950 border-2 border-indigo-400/80 border-b-0 transition-all duration-300 hover:text-yellow-200"
+          className="p-2 text-lg w-full font-heading font-semibold bg-gradient-to-bl odd:bg-gradient-to-br from-violet-400 to-indigo-950 border-2 border-violet-400/80 border-b-0 transition-all duration-300 hover:text-yellow-200"
           onClick={handleHideCv}
           aria-label="Fechar visualização do Currículo" // Acessibilidade: Aria-label para o botão de fechar
         >

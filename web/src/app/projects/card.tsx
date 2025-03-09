@@ -48,10 +48,10 @@ const Card: React.FC<CardProps> = ({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
-      className="w-full h-fit max-w-96 flex flex-col items-center justify-center px-2 py-1 gap-1 rounded-lg bg-gradient-to-tl even:bg-gradient-to-tr from-indigo-400 to-violet-950 border-2 border-indigo-400/50 hover:shadow-md shadow-orange-300 border-opacity-60 hover:scale-95 hover:rotate-6 even:hover:-rotate-6 transition-all"
+      className="w-full h-fit max-w-96 flex flex-col items-center justify-center px-2 py-1 rounded-lg bg-gradient-to-tl even:bg-gradient-to-tr from-violet-400 to-indigo-950 border-2 border-violet-400/50 hover:shadow-md shadow-orange-300 border-opacity-60 hover:scale-95 hover:rotate-6 even:hover:-rotate-6 transition-all"
     >
       <a
-        className="w-full h-full text-center"
+        className="w-full h-full text-center flex flex-col gap-1"
         href={link}
         target="_blank"
         rel="noopener noreferrer"
@@ -78,7 +78,7 @@ const Card: React.FC<CardProps> = ({
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="bg-indigo-950/60 text-lime-300 capitalize rounded-full px-2 py-1 text-sm"
+              className="bg-violet-950/60 text-lime-300 capitalize rounded-full px-2 py-1 text-sm"
               aria-label={`Tecnologia: ${tech}`} // Aria-label for technology badge - MAINTAINED
             >
               {tech}
