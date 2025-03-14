@@ -1,4 +1,4 @@
-<h1 align="center">Portfólio Digital</h1>
+<h1 align="center">Portfólio</h1>
 
 <p align="center">
 Uma vitrine online para suas habilidades e personalidade, construída com as mais recentes tecnologias web.
@@ -11,22 +11,22 @@ Uma vitrine online para suas habilidades e personalidade, construída com as mai
 </p>
 
 <div align="center">
-<a href="https://maiazip.github.io/LinkTree/" target="_blank">Acesse o Portfólio</a>
+<a href="https://portfolio-7ckjhe60p-maiazipmb.vercel.app/" target="_blank">Acesse o Portfólio</a>
 </div>
 
 <h2 align="center">Visualização do Portfólio</h2>
 
 <p align="center">
-<img alt="Visualização Desktop" src="./github/previewDesktop.png" width="100%">
+<img alt="Visualização Desktop" src=".github/previewDesktop.png" width="100%">
 </p>
 
 <p align="center">
-<img alt="Visualização Mobile" src="./github/previewMobile.png" height="975px">
+<img alt="Visualização Mobile" src=".github/previewMobile.png" height="975px">
 </p>
 
 ## Projeto
 
-Este portfólio digital foi concebido como um espaço pessoal para exibir minhas habilidades e projetos de forma clara e elegante. O projeto LinkTree integrado permite reunir diversos links em um único lugar, facilitando o acesso a todas as minhas plataformas online.
+Este portfólio foi concebido como um espaço pessoal para exibir minhas habilidades e projetos de forma clara e elegante.
 
 ## Tecnologias
 
@@ -46,7 +46,7 @@ Este portfólio digital foi concebido como um espaço pessoal para exibir minhas
 
 ## Apresentação
 
-Este portfólio digital foi desenvolvido com o objetivo de criar uma experiência online interativa e envolvente, destacando minhas habilidades e personalidade de forma profissional. Utilizando as mais recentes tecnologias web, este projeto serve como uma porta de entrada para o meu trabalho no mundo digital.
+Este portfólio foi desenvolvido com o objetivo de criar uma experiência online interativa e envolvente, destacando minhas habilidades e personalidade de forma profissional. Utilizando as mais recentes tecnologias web, este projeto serve como uma porta de entrada para o meu trabalho no mundo digital.
 
 O desenvolvimento deste portfólio seguiu rigorosamente as **melhores práticas de desenvolvimento web**, incluindo:
 
