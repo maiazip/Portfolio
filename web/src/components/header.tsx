@@ -43,12 +43,11 @@ export default function Header({ sectionRefs }: HeaderProps) {
       role="banner" // Semântica e Acessibilidade: Define o header como banner
     >
       <nav
-        className="w-10/12 max-w-screen-lg h-full flex items-center justify-center rounded-b-full bg-gradient-to-b from-violet-900/100 to-violet-900/30 backdrop-blur backdrop-brightness-50 px-2 shadow shadow-violet-500/100"
+        className=" rounded-b-full px-4 w-10/12 max-w-screen-lg h-full flex items-center justify-center bg-gradient-to-b from-violet-900/100 to-violet-900/30 backdrop-blur backdrop-brightness-50 shadow shadow-violet-500/100 "
         aria-label="Navegação principal" // Acessibilidade: Label para a navegação
       >
         <ul className="w-full h-full flex flex-row items-center justify-evenly max-md:text-2xl select-none">
           <li className="group">
-            {" "}
             {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
             <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
               title="Início"
@@ -63,7 +62,6 @@ export default function Header({ sectionRefs }: HeaderProps) {
             </button>
           </li>
           <li className="group">
-            {" "}
             {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
             <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
               title="Introdução"
@@ -78,7 +76,6 @@ export default function Header({ sectionRefs }: HeaderProps) {
             </button>
           </li>
           <li className="group">
-            {" "}
             {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
             <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
               title="Sobre mim"
@@ -93,7 +90,6 @@ export default function Header({ sectionRefs }: HeaderProps) {
             </button>
           </li>
           <li className="group">
-            {" "}
             {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
             <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
               title="Certificados"
@@ -108,7 +104,6 @@ export default function Header({ sectionRefs }: HeaderProps) {
             </button>
           </li>
           <li className="group">
-            {" "}
             {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
             <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
               title="Sobre Meu Trabalho"
@@ -123,7 +118,6 @@ export default function Header({ sectionRefs }: HeaderProps) {
             </button>
           </li>
           <li className="group">
-            {" "}
             {/* Semântica: Adicionado 'group' para agrupar ícone e texto */}
             <button // Semântica e Acessibilidade: Usando <button> para ações de navegação
               title="Projetos"

@@ -27,7 +27,7 @@ export default function Footer() {
       transition={{ duration: 0.5 }}
       aria-label="Footer de contato e informações" // Acessibilidade: Aria-label para o footer
     >
-      <nav className="w-11/12 h-full flex flex-col items-end justify-end gap-1 px-8 pt-8 pb-2 max-w-screen-lg rounded-t-[4rem] bg-gradient-to-b from-violet-900 to-violet-900/30 shadow-sm shadow-violet-500/100 backdrop-blur backdrop-brightness-50">
+      <nav className="clip-slant-botto rounded-t-3xl w-11/12 h-full flex flex-col items-end justify-end gap-1 px-8 pt-8 pb-2 max-w-screen-lg bg-gradient-to-b from-violet-900 to-violet-900/30 shadow-sm shadow-violet-500/100 backdrop-blur backdrop-brightness-50">
         <ul
           className="w-full h-fit flex flex-row flex-wrap justify-center items-center gap-2"
           aria-label="Links de redes sociais" // Acessibilidade: Aria-label para a lista de links sociais
