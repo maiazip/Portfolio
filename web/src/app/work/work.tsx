@@ -42,19 +42,20 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
         <Divider />
         <Text>
           Harmonia e Intuitividade moldam a metodologia que aplico em meus
-          projetos como{" "}
+          trabalhos como{" "}
           <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
             Desenvolvedor Front End
           </strong>{" "}
           e{" "}
           <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
-            UI UX Designer
+            Web Designer
           </strong>
           .
         </Text>
         <Text>
-          Construo websites com designs intuitivos e modernos, que proporcionem
-          praticidade, pois um website construído com{" "}
+          Construir websites com designs intuitivos e modernos que proporcionem
+          praticidade é sempre meu principal objetivo, pois um website
+          construído com{" "}
           <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
             inteligência
           </strong>{" "}
@@ -65,29 +66,28 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
           .
         </Text>
         <Text>
-          Elegância e modernidade é o que busco alcançar aplicando meus
-          conhecimentos em{" "}
+          Com meus conhecimentos em{" "}
           <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
             Design
           </strong>{" "}
-          no{" "}
-          <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
-            Desenvolvimento Front End
-          </strong>
-          .
+          busco aplicar em meus sites sempre os princípios necessários para
+          alcançar elegância, modernidade e harmonia
         </Text>
         <Text>
           Tudo isso em conjunto da utilização de boas práticas de{" "}
-          <abbr className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
-            SEO
+          <abbr
+            className="text-orange-300 font-bold no-underline transition-colors ease-in-out duration-1000 hover:text-lime-300"
+            title="Otimização para Mecanismos de Busca. (Search Engine Optimization)"
+          >
+            {"<"}SEO{">"}
           </abbr>{" "}
           e{" "}
-          <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
-            Clean Code
+          <strong className="text-orange-300 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
+            {"</"}Acessibilidade{">"}
           </strong>{" "}
-          é o que torna meu trabalho valioso.
+          tornam meu trabalho não apenas bonito, mas também útil e valioso.
         </Text>
-        <Text>
+        {/* <Text>
           Ainda sim sei que tenho muito a aprender, pois aquele que acha que de
           tudo sabe acabará na ignorância, porém sou grato por tudo que sei e
           pelas boas{" "}
@@ -99,7 +99,7 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
             criatividade
           </strong>
           .
-        </Text>
+        </Text> */}
         <Divider />
       </article>
     </section>
