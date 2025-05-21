@@ -35,48 +35,69 @@ const About = forwardRef<HTMLElement>((props, ref) => {
       />
       <article className="w-full">
         <Divider />
-        <Text>
-          Olá forma de vida senciente, eu me chamo{" "}
-          <a
-            href="https://www.linkedin.com/in/maiazip/"
-            target="_blank"
-            rel="noopener noreferrer" // Segurança e performance: Adicionado rel="noopener noreferrer"
-            className="text-yellow-200 font-bold   transition-colors ease-in-out duration-1000 hover:text-lime-300"
-            aria-label="LinkedIn de Matheus Maia Bastos (abre em nova janela)" // Acessibilidade: Aria-label para o link
-          >
-            Matheus Maia Bastos
-          </a>{" "}
-          e lhe dou boas vindas ao meu Portfólio virtual.
-        </Text>
-        <Text>
-          Com{" "}
-          <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
-            5
-          </strong>{" "}
-          anos de experiência em programação no geral, utilizo meus
-          conhecimentos para criar experiências modernas e intuitivas na Web.
-        </Text>
-        <Text>
-          {" "}
-          Atualmente possuo{" "}
-          <abbr
-            title="Data de nascimento: 09/04/2000"
-            className="text-orange-300 font-bold no-underline transition-colors ease-in-out duration-1000 hover:text-lime-300"
-          >
-            {`{`} 24 {`}`}
-          </abbr>{" "}
-          anos terrestres de idade e me localizo em{" "}
-          <a
-            className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
-            href="https://g.co/kgs/wKcSPTY"
-            target="_blank"
-            rel="noopener noreferrer" // Segurança e performance: Adicionado rel="noopener noreferrer"
-            aria-label="Localização de Fortaleza no Google Maps (abre em nova janela)" // Acessibilidade: Aria-label para o link
-          >
-            Fortaleza
-          </a>
-          .
-        </Text>
+<Text>
+  Olá forma de vida senciente, eu me chamo{" "}
+  <a
+    href="https://www.linkedin.com/in/maiazip/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
+    aria-label="LinkedIn de Matheus Maia Bastos (abre em nova janela)"
+  >
+    Matheus Maia Bastos
+  </a>{" "}
+  e lhe dou boas vindas ao meu Portfólio virtual.
+</Text>
+<Text>
+  Possuo sólida base em **programação Front End**, com especialização em **React**, **Next.js**, **TypeScript** e **JavaScript**. Utilizo frameworks como **Tailwind** para estilização e bibliotecas como **Motion** para **Motion Design**, além de conhecimento em **SEO** e controle de versão com **Git** e **GitHub**.
+</Text>
+<Text>
+  Também tenho experiência prática em **projetos Full Stack** e me encontro cursando o **último semestre** na graduação de{" "}
+  <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
+    Análise e Desenvolvimento de Sistemas
+  </strong>{" "}
+  <abbr
+    className="text-orange-300 no-underline font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
+    title="Análise e Desenvolvimento de Sistemas"
+  >
+    {`<`}ADS{`>`}
+  </abbr>{" "}
+  no instituto de ensino superior{" "}
+  <abbr
+    className="text-orange-300 no-underline font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
+    title="Faculdade Das Américas"
+  >
+    <a
+      href="https://www.vemprafam.com.br/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Site do centro universitário (FAM) (abre em nova janela)"
+    >
+      {`</`}FAM{`>`}
+    </a>{" "}
+  </abbr>
+  . Busco minha primeira experiência formal na área de desenvolvimento.
+</Text>
+<Text>
+  Atualmente possuo{" "}
+  <abbr
+    title="Data de nascimento: 09/04/2000"
+    className="text-orange-300 font-bold no-underline transition-colors ease-in-out duration-1000 hover:text-lime-300"
+  >
+    {`{`} 24 {`}`}
+  </abbr>{" "}
+  anos terrestres de idade e me localizo em{" "}
+  <a
+    className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300"
+    href="https://g.co/kgs/wKcSPTY"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Localização de Fortaleza no Google Maps (abre em nova janela)"
+  >
+    Fortaleza
+  </a>
+  .
+</Text>
         <Text>
           Me encontro cursando o último semestre na graduação de{" "}
           <strong className="text-yellow-200 font-bold transition-colors ease-in-out duration-1000 hover:text-lime-300">
